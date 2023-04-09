@@ -1,7 +1,7 @@
 {
-  "name": "nestjs-telegraf",
-  "version": "2.6.3",
-  "description": "Telegraf module for NestJS",
+  "name": "@aronysky/nestjs-telegraf",
+  "version": "3.0.0",
+  "description": "Just a temp package!!!",
   "keywords": [
     "nest",
     "nestjs",
@@ -18,15 +18,14 @@
   "bugs": {
     "url": "https://github.com/hypeertech/nestjs-telegraf/issues"
   },
-  "repository": "git@github.com:hypeertech/nestjs-telegraf.git",
-  "funding": "https://hypeer.company/donate",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/skyArony/nestjs-telegraf.git"
+  },
   "license": "MIT",
   "author": "Hypeer <hello@hypeer.company>",
   "contributors": [
-    {
-      "name": "Arthur Asimov",
-      "email": "arthur.asimov.z0@gmail.com"
-    }
+    "Arthur Asimov <arthur.asimov.z0@gmail.com>"
   ],
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -77,5 +76,8 @@
     "reflect-metadata": "^0.1.13",
     "telegraf": "^4.0.0",
     "typescript": "^4.1.2"
+  },
+  "directories": {
+    "lib": "lib"
   }
 }
