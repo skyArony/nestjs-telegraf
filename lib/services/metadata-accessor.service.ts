@@ -12,6 +12,7 @@ import {
   SceneMetadata,
   WizardStepMetadata,
 } from '../interfaces';
+import { ComposerMetadata } from '../interfaces/composer-metadata.interface';
 
 @Injectable()
 export class MetadataAccessorService {
@@ -42,5 +43,9 @@ export class MetadataAccessorService {
 
   getWizardStepMetadata(target: Function): WizardStepMetadata | undefined {
     return this.reflector.get(WIZARD_STEP_METADATA, target);
+  }
+
+  getComposerMetadata(target: Function): ComposerMetadata | undefined {
+    return this.reflector.get(COMPOSER_METADATA, target);
   }
 }

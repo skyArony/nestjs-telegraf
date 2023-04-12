@@ -49,15 +49,19 @@ export class ListenersExplorerService
       strict: false,
     });
 
+    this.explore();
+  }
+
+  explore(): void {
     const modules = this.getModules(
       this.modulesContainer,
       this.telegrafOptions.include || [],
     );
-    this.registerComposers(modules);
-    this.registerScenes(modules);
 
+    this.registerScenes(modules);
     this.bot.use(this.stage.middleware());
 
+    this.registerComposers(modules);
     this.registerUpdates(modules);
   }
 
@@ -68,7 +72,23 @@ export class ListenersExplorerService
     composers.forEach((wrapper) => {
       const composer = new Composer();
       this.registerListeners(composer, wrapper);
-      this.stage.use(composer);
+      const metadata = this.metadataAccessor.getComposerMetadata(
+        wrapper.instance.constructor,
+      );
+      if (metadata.handlers) {
+        // 取出第一个元素预先处理，处理后删除第一个元素
+        const middlewareFn = metadata.handlers[0](composer);
+        metadata.handlers.shift();
+        // 继续处理剩余的元素
+        const composedMiddleware = metadata.handlers.reduce(
+          (acc, curr) => curr(acc),
+          middlewareFn,
+        );
+        // 应用组合后的中间件
+        this.bot.use(composedMiddleware);
+      } else {
+        this.bot.use(composer);
+      }
     });
   }
 

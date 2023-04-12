@@ -1,6 +1,6 @@
 {
   "name": "@aronysky/nestjs-telegraf",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Just a temp package!!!",
   "keywords": [
     "nest",
@@ -34,6 +34,7 @@
     "precommit": "lint-staged",
     "prepublish:npm": "npm run build",
     "publish:npm": "npm publish --access public",
+    "publish:beta:npm": "npm publish --access public --tag beta",
     "test": "",
     "typedoc:build": "typedoc --tsconfig ./tsconfig.typedoc.json"
   },
