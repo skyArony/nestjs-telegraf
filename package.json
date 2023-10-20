@@ -1,6 +1,6 @@
 {
   "name": "@aronysky/nestjs-telegraf",
-  "version": "3.0.1",
+  "version": "3.1.1",
   "description": "Just a temp package!!!",
   "keywords": [
     "nest",
@@ -53,30 +53,30 @@
     "lodash": "^4.17.21"
   },
   "devDependencies": {
-    "@commitlint/cli": "17.1.2",
-    "@commitlint/config-angular": "17.1.0",
-    "@nestjs/common": "^9.0.11",
-    "@nestjs/core": "^9.0.11",
-    "@types/lodash": "4.14.191",
-    "@typescript-eslint/eslint-plugin": "5.44.0",
-    "@typescript-eslint/parser": "5.45.0",
-    "eslint": "8.28.0",
-    "eslint-config-prettier": "8.5.0",
-    "eslint-plugin-prettier": "4.2.1",
-    "husky": "8.0.1",
-    "lint-staged": "13.0.4",
-    "prettier": "2.8.0",
+    "@commitlint/cli": "17.8.0",
+    "@commitlint/config-angular": "17.8.0",
+    "@nestjs/common": "^10.2.7",
+    "@nestjs/core": "^10.2.7",
+    "@types/lodash": "4.14.200",
+    "@typescript-eslint/eslint-plugin": "6.8.0",
+    "@typescript-eslint/parser": "6.8.0",
+    "eslint": "8.51.0",
+    "eslint-config-prettier": "9.0.0",
+    "eslint-plugin-prettier": "5.0.1",
+    "husky": "8.0.3",
+    "lint-staged": "15.0.2",
+    "prettier": "3.0.3",
     "reflect-metadata": "0.1.13",
-    "telegraf": "4.11.2",
-    "typedoc": "0.23.11",
-    "typescript": "4.8.2"
+    "telegraf": "4.14.0",
+    "typedoc": "0.25.2",
+    "typescript": "^5.2.2"
   },
   "peerDependencies": {
-    "@nestjs/common": "^8.0.0 || ^9.0.0",
-    "@nestjs/core": "^8.0.0 || ^9.0.0",
+    "@nestjs/common": "^10.2.7",
+    "@nestjs/core": "^10.2.7",
     "reflect-metadata": "^0.1.13",
-    "telegraf": "^4.0.0",
-    "typescript": "^4.1.2"
+    "telegraf": "4.14.0",
+    "typescript": "^5.2.2"
   },
   "directories": {
     "lib": "lib"
