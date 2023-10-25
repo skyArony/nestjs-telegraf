@@ -75,7 +75,7 @@ export class ListenersExplorerService
       const metadata = this.metadataAccessor.getComposerMetadata(
         wrapper.instance.constructor,
       );
-      if (metadata.handlers) {
+      if (metadata.handlers.length > 0) {
         // 取出第一个元素预先处理，处理后删除第一个元素
         const middlewareFn = metadata.handlers[0](composer);
         metadata.handlers.shift();
